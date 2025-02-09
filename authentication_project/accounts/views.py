@@ -14,19 +14,19 @@ def signup_view(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)  # Log in after signup
+            login(request, user)  
             return redirect('login')
     else:
         form = SignupForm()  
 
-    return render(request, 'accounts/signup.html', {'form': form})  # Pass form even if invalid
+    return render(request, 'accounts/signup.html', {'form': form}) 
 
 
 def login_view(request):
     form = AuthenticationForm(request, data=request.POST or None)
     
     if request.method == 'POST':
-        if form.is_valid():  # Checks username & password
+        if form.is_valid():  
             user = form.get_user()
             login(request, user)
             return redirect('dashboard')

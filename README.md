@@ -20,5 +20,6 @@ You can check out the **live hosted version** of the project here:
 
 ## 🔹 Installation & Setup  
 1. Clone the repository:  
+   ```sh
    git clone https://github.com/Kishan0610/Assignment_WhatBytes.git
    cd Assignment_WhatBytes
